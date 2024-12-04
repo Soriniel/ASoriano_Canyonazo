@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Verde : MonoBehaviour
 {
-    GameObject bala;
+    public GameObject bala;
     GameObject balas;
     Vector3 posicionInicial;
     public GameObject balaPrefab;
@@ -15,24 +15,28 @@ public class Verde : MonoBehaviour
         bala = GameObject.Find("Bala");
         posicionInicial = bala.transform.position;
         balaPrefab = Resources.Load<GameObject>("Bala");
-        GameObject canon = GameObject.FindGameObjectWithTag("Canon");
-
+        GameObject canon = GameObject.Find("Canon");
     }
 
 
     void Update()
     {
-        int cerca = 10;
-        if (balas!= null)
+        if (balas != null)
         {
-           float distancia = Vector3.Distance (balas.transform.position, cerca);
-            Renderer renderer = this.GetComponent<Renderer>();
-            Color randomColor = new Color(
-               Random.Range(0f, 1f), // Valor aleatorio para el rojo.
-               Random.Range(0f, 1f), // Valor aleatorio para el verde.
-               Random.Range(0f, 1f));
-            renderer.material.color = randomColor;
+            float dist = Vector3.Distance(balas.transform.position, transform.position);
+            int cerca = 10;
 
+            if (cerca > dist)
+
+            {
+                Renderer renderer = canon.GetComponent<Renderer>();
+                Color randomColor = new Color(
+                   Random.Range(0f, 1f), // Valor aleatorio para el rojo.
+                   Random.Range(0f, 1f), // Valor aleatorio para el verde.
+                   Random.Range(0f, 1f));
+                renderer.material.color = randomColor;
+
+            }
         }
 
     }
