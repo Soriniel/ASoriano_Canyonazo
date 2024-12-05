@@ -16,6 +16,8 @@ public class Verde : MonoBehaviour
         posicionInicial = bala.transform.position;
         balaPrefab = Resources.Load<GameObject>("Bala");
         GameObject canon = GameObject.Find("Canon");
+        GameManager gameManager = FindObjectOfType<GameManager>();
+
     }
 
 
@@ -44,11 +46,8 @@ public class Verde : MonoBehaviour
 
     private void OnMouseDown()
     {
-        
-
         // Instanciar la bala en la posición inicial guardada
         balas = Instantiate(balaPrefab, posicionInicial, transform.rotation);
-
         // Asegúrate de que la bala tenga un Rigidbody para moverse
         Rigidbody rb = balas.GetComponent<Rigidbody>();
         if (rb != null)
@@ -59,6 +58,8 @@ public class Verde : MonoBehaviour
             rb.velocity = direccionDeDisparo * velocidad;
 
         }
+
+        GameManager.IncNumBalas();
 
 
     }

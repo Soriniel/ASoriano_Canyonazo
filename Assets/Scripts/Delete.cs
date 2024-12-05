@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class Delete : MonoBehaviour
 {
-     // Etiqueta asignada a las balas.
+    // Etiqueta asignada a las balas.
+    private void Start()
+    {
+        GameManager gameManager = FindObjectOfType<GameManager>();
+    }
 
     private void OnMouseDown()
     {
@@ -16,6 +20,9 @@ public class Delete : MonoBehaviour
             {
                 Destroy(bala); // Destruye cada bala encontrada.
             }
-        
+
+        GameManager.ResetearBalas();
+
+
     }
 }
