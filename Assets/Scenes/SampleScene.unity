@@ -719,6 +719,7 @@ GameObject:
   - component: {fileID: 1300887786}
   - component: {fileID: 1300887785}
   - component: {fileID: 1300887784}
+  - component: {fileID: 1300887788}
   m_Layer: 0
   m_Name: Cube (2)
   m_TagString: Untagged
@@ -812,6 +813,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1300887788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300887783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 565485d423cc24b4db3ae95dccaed60e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bala: {fileID: 0}
+  balaPrefab: {fileID: 0}
+  canon: {fileID: 1947113479}
 --- !u!1 &1372790982
 GameObject:
   m_ObjectHideFlags: 0
@@ -1091,7 +1107,6 @@ GameObject:
   - component: {fileID: 1947113481}
   - component: {fileID: 1947113480}
   - component: {fileID: 1947113484}
-  - component: {fileID: 1947113485}
   m_Layer: 0
   m_Name: Canon
   m_TagString: Canon
@@ -1208,18 +1223,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 5.451393, y: 3.6173706, z: 2.4177077}
   m_Center: {x: -1.1965362, y: 0.80868196, z: -0.31034604}
---- !u!114 &1947113485
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947113479}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f4efbcf2260db745b68bcd37cea12a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1992431777
 GameObject:
   m_ObjectHideFlags: 0

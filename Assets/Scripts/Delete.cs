@@ -21,7 +21,7 @@ public class Delete : MonoBehaviour
                 Destroy(bala); // Destruye cada bala encontrada.
             }
 
-        GameManager.ResetearBalas();
+        GameManager.ResetearBalas(); //Pone en 0 el contador de balas
 
 
     }
